@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Raleway, sans-serif;
+  
+}
+body{
+  background: linear-gradient(90deg, #C7C5F4, #776BCC);
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 88vh;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.screen {
+  background: linear-gradient(90deg, #5D54A4, #7C78B8);
+  position: relative;
+  height: 650px;
+  width: 550px;
+  box-shadow: 0px 0px 24px #5C5696;
+}
+
+.screen__content {
+  z-index: 1;
+  position: relative;
+  height: 100%;
+  margin-left: 20px;
+}
+
+.screen__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  -webkit-clip-path: inset(0 0 0 0);
+  clip-path: inset(0 0 0 0);
+}
+
+.screen__background__shape {
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.screen__background__shape1 {
+  height: 520px;
+  width: 520px;
+  background: #FFF;
+  top: -50px;
+  right: 120px;
+  border-radius: 0 72px 0 0;
+}
+
+.screen__background__shape3 {
+  height: 540px;
+  width: 450px;
+  background: linear-gradient(270deg, #5D54A4, #6A679E);
+  top: -24px;
+  right: 0;
+  border-radius: 32px;
+}
+
+.screen__background__shape4 {
+  height: 400px;
+  width: 200px;
+  background: #7E7BB9;
+  top: 420px;
+  right: 50px;
+  border-radius: 60px;
+}
+
+.login {
+  width: 320px;
+  padding: 30px;
+  padding-top: 100px;
+}
+
+.login__field {
+  padding: 20px 0px;
+  position: relative;
+}
+
+.login__icon {
+  position: absolute;
+  top: 30px;
+  color: #7875B5;
+}
+
+.login__input {
+  border: none;
+  border-bottom: 2px solid #D1D1D4;
+  background: none;
+  padding: 10px;
+  padding-left: 24px;
+  font-weight: 700;
+  width: 400px;
+  height: 50px;
+  transition: .2s;
+  font-size: 25px;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+  outline: none;
+  border-bottom-color: #6A679E;
+}
+
+.login__submit {
+  background: #fff;
+  width: 200px;
+  height: 60px;
+  padding: 16px 20px;
+  border-radius: 100px;
+  border: 4px solid #a09dff;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  color: #3f3a91;
+  box-shadow: 0px 2px 2px #5C5696;
+  cursor: pointer;
+  transition: .2s;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+  border-color: #6A679E;
+  outline: none;
+}
+
+.button__text{
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.button__icon {
+  font-size: 24px;
+  margin-left: auto;
+  color: #7875B5;
+}
+
+.captcha {
+  border: 4px solid black;
+  border-radius: 20px;
+  background: none;
+  padding-left: 40px;
+  padding-top: 5px;
+  font-weight: 700;
+  width: 200px;
+  height: 60px;
+  transition: .2s;
+  font-size: 30px;
+  background-color: #a09dff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.enterCaptcha {
+  border: 2px solid black;
+  border-radius: 20px;
+  background: none;
+  padding-left: 33px;
+  padding-bottom: 5px;
+  font-weight: 700;
+  width: 200px;
+  height: 60px;
+  transition: .2s;
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  background-color: #a09dff;;
+  
+}
+
+.captchaText {
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+
+@media screen and (max-width: 700px) {
+  
+  .login {
+    max-width: 402px;
+  }
+  .container {
+    max-width: 402px;
+  }
+  .login__input{
+    width: 250px;
+    font-size: 16px;
+  }
+  .login__submit {
+    width: 150px;
+    height: 60px;
+    font-size: 16px;
+  }
+
+}
+
+@media screen and (max-width: 400px) and (min-width: 100px) {
+
+  .login,
+  .container {
+    height: 100%;
+    max-width: 300px;
+  }
+ 
+  .login__input{
+    width: 200px;
+    font-size: 14px;
+  }
+  .login__submit {
+    width: 100px;
+    height: 60px;
+    font-size: 10px;
+  }
+
+ 
+}
+
+.darkButton {
+  border-radius: 8px;
+  font-size: 18px;
+  background-color: #a09dff;
+  color: white;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+}
+.lightButton {
+  border-radius: 8px;
+  font-size: 18px;
+  background-color: #a09dff;
+  color: white;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.Dark_Mode {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  
+}
+.Light_Mode {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(90deg, #C7C5F4, #776BCC);
+}
+.modesBtn{
+  display: flex;
+  
+}
+
+.home{
+  margin-left: 200px;
+  margin-top: 200px;
+  font-size: 40px;
+  font-weight: bold;
+
+}
